@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <body>
 
-	meaow said the cat
+<p id="p1">	meaow said the cat </p>
 
 <script>
 
@@ -13,15 +13,19 @@
 	document.ontouchstart = resetTimer;
 	document.onclick = resetTimer;
 	document.onscroll = resetTimer;
+	document.onfocus = resetTimer;
+	document.onblur = resetTimer;
 
 	function refresh() {
-		location.reload(true);
+		document.getElementById("p1").innerHTML = "the dog said woof";
+		//xslocation.reload(true);
 	}
 
 	function resetTimer() {
 		clearTimeout(t);
-		t = setTimeout(refresh, 86400000)
+		t = setTimeout(refresh, 5000)
 		// 1000 milisec = 1 sec
+		// 86400000 = 24 hours
 	};
 
 </script>
