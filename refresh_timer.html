@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<body>
+
+	meaow said the cat
+
+<script>
+
+	var t;
+	window.onload = resetTimer;
+	// DOM Events
+	document.onmousemove = resetTimer;
+	document.onkeypress = resetTimer;
+	document.onmousedown = resetTimer; // touchscreen presses
+	document.ontouchstart = resetTimer;
+	document.onclick = resetTimer;     // touchpad clicks
+	document.onscroll = resetTimer;    // scrolling with arrow keys
+
+	function refresh() {
+		location.reload(true);
+		//location.href = 'logout.php'
+	}
+
+	function resetTimer() {
+		clearTimeout(t);
+		t = setTimeout(refresh, 1000)
+		// 1000 milisec = 1 sec
+	};
+
+</script>
+
+
+
+</body>
+</html> 
