@@ -15,12 +15,12 @@
 	document.onscroll = resetTimer;
 
 	function refresh() {
-		setTimeout("location.reload(true);",86400000);
+		location.reload(true);
 	}
 
 	function resetTimer() {
 		clearTimeout(t);
-		t = setTimeout(refresh, 3600000)
+		t = setTimeout(refresh, 86400000)
 		// 1000 milisec = 1 sec
 	};
 
