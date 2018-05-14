@@ -13,8 +13,8 @@
 	document.ontouchstart = resetTimer;
 	document.onclick = resetTimer;
 	document.onscroll = resetTimer;
-	document.onfocus = resetTimer;
-	document.onblur = resetTimer;
+	window.onfocus = resetTimer;
+	window.onblur = resetTimer;
 
 	function refresh() {
 		document.getElementById("p1").innerHTML = "the dog said woof";
