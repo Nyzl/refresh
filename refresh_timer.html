@@ -7,22 +7,20 @@
 
 	var t;
 	window.onload = resetTimer;
-	// DOM Events
 	document.onmousemove = resetTimer;
 	document.onkeypress = resetTimer;
-	document.onmousedown = resetTimer; // touchscreen presses
+	document.onmousedown = resetTimer;
 	document.ontouchstart = resetTimer;
-	document.onclick = resetTimer;     // touchpad clicks
-	document.onscroll = resetTimer;    // scrolling with arrow keys
+	document.onclick = resetTimer;
+	document.onscroll = resetTimer;
 
 	function refresh() {
-		location.reload(true);
-		//location.href = 'logout.php'
+		setTimeout("location.reload(true);",86400000);
 	}
 
 	function resetTimer() {
 		clearTimeout(t);
-		t = setTimeout(refresh, 1000)
+		t = setTimeout(refresh, 3600000)
 		// 1000 milisec = 1 sec
 	};
 
